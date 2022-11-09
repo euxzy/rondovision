@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Rondovison</title>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="header">
+          <h1>Rondovision</h1>
+          <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul>
+            <li>Home</li>
+            <li>Best Seller</li>
+            <li>All Under $30</li>
+            <li>Reviews</li>
+            <li><button type="button">Sign Up</button></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="hero">
+          <div class="hero-content">
+            <h1><span>Classic</span> With <span>Natural</span> Twist.</h1>
+            <p>Find your classic style now!</p>
+            <div class="action">
+              <button type="button">
+                <img class="appstore" src="appstore.png" alt="appstore" />
+              </button>
+              <button type="button">
+                <img class="playstore" src="playstore.png" alt="playstore" />
+              </button>
+            </div>
+          </div>
+          <div class="hero-img">
+            <div class="hero-img-main">
+              <div class="img-main"><img src="bg.png" alt="" /></div>
+              <div class="img-shadow shadow-white"><img src="bg-shadow-white.png" alt="" /></div>
+              <div class="img-shadow shadow-orange"><img src="bg-shadow-orange.png" alt="" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div id="product" class="product">
+          <h1>2021 New arrivals</h1>
+          <div class="product-card">
+            <div class="card">
+              <div class="card-img">
+                <img src="product-1.jpg" alt="product 1" />
+              </div>
+              <div class="card-body">
+                <div class="card-text">
+                  <h3>Hoodies & Sweetshirt</h3>
+                  <p>Buy Now!</p>
+                </div>
+                <div class="card-arrow">
+                  <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+                <img src="product-1.jpg" alt="product 1" />
+              </div>
+              <div class="card-body">
+                <div class="card-text">
+                  <h3>Hoodies & Sweetshirt</h2>
+                  <p>Buy Now!</p>
+                </div>
+                <div class="card-arrow">
+                  <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+                <img src="product-1.jpg" alt="product 1" />
+              </div>
+              <div class="card-body">
+                <div class="card-text">
+                  <h3>Hoodies & Sweetshirt</h3>
+                  <p>Buy Now!</p>
+                </div>
+                <div class="card-arrow">
+                  <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="height: 1000px"></section>
+
+    <script>
+      const hamburgerMenu = document.querySelector('.hamburger-menu');
+      const navMenu = document.querySelector('.header ul');
+      const humburgerItem = document.querySelectorAll('.header .hamburger-menu span');
+
+      hamburgerMenu.addEventListener('click', () => {
+        navMenu.classList.toggle('show-menu');
+        humburgerItem.forEach((item) => {
+          item.classList.toggle('close');
+        });
+      });
+    </script>
+  </body>
+</html>
