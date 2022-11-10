@@ -433,7 +433,7 @@ section:nth-child(2) {
   transition-duration: 300ms;
   opacity: 0.4;
 }
-.partner .right .brand-logo img:hover {
+.partner .right .brand-logo:hover img {
   width: 80%;
   opacity: 1;
 }
@@ -519,6 +519,7 @@ section:nth-child(2) {
   align-items: center;
 }
 .download .left {
+  cursor: default;
   width: 35%;
 }
 .download .left h1 {
@@ -531,10 +532,17 @@ section:nth-child(2) {
   margin: 32px 0;
 }
 .download .left .action button {
+  cursor: pointer;
   width: 125px;
   background: transparent;
   border: 0;
   padding: 0;
+  transition: all;
+  transition-duration: 300ms;
+  scale: 1;
+}
+.download .left .action button:hover {
+  scale: 1.2;
 }
 .download .left .action button img.appstore {
   width: 85%;
@@ -574,6 +582,7 @@ section:nth-child(2) {
   padding: 0;
 }
 .contact .signup-form {
+  position: relative;
   display: flex;
   width: 350px;
   height: 55px;
@@ -581,18 +590,23 @@ section:nth-child(2) {
   justify-content: space-between;
   border-radius: 6px;
 }
+.contact .signup-form:hover {
+  box-shadow: 0 0 5px 1px #ff8900, 0 0 10px 4px #fff;
+}
 .contact .signup-form input,
 .contact .signup-form button {
   margin: 0;
   border: 0;
 }
 .contact .signup-form input {
+  position: relative;
   background: transparent;
   width: 60%;
   padding: 12px 20px;
   outline: none;
 }
 .contact .signup-form button {
+  position: absolute;
   display: inline-block;
   cursor: pointer;
   background: #000;
@@ -600,6 +614,8 @@ section:nth-child(2) {
   margin: 2px -2px;
   padding: 12px 20px;
   border-radius: 8px;
+  top: 0;
+  right: 0;
   scale: 0.8;
 }
 
@@ -618,7 +634,7 @@ section:nth-child(2) {
 .footer .quick-link {
   width: 30%;
 }
-.footer .quick-link,
+.footer .company,
 .footer .legal {
   width: 15%;
 }
@@ -674,7 +690,7 @@ section:nth-child(2) {
 }
 
 /* mobile vesion */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .header {
     justify-content: space-around;
   }
@@ -765,7 +781,6 @@ section:nth-child(2) {
     flex-direction: column;
     justify-content: space-evenly;
     gap: 100px;
-    overflow: hidden;
   }
   .discount .discount-img {
     width: 95%;
@@ -815,5 +830,40 @@ section:nth-child(2) {
     width: 100%;
     height: 160px;
     overflow: hidden;
+  }
+
+  /* download section */
+  .download {
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+  }
+  .download .left,
+  .download .right {
+    width: 80%;
+  }
+
+  /* contact section */
+  .contact h1 {
+    font-size: 28px;
+    width: 85%;
+  }
+  .contact p {
+    text-align: center;
+    padding: 0 40px;
+  }
+
+  /* footer */
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+  }
+  .footer .address,
+  .footer .quick-link,
+  .footer .company,
+  .footer .legal {
+    width: 75%;
   }
 }
